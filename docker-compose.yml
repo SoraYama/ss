@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  ss:
+    image: shadowsocks/shadowsocks-libev
+    container_name: "shadowsocks"
+    ports:
+      - "10825:8388"
+      - "10825:8388/udp"
+    env_file:
+      - .env
+    restart: always
